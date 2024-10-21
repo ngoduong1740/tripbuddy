@@ -39,7 +39,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
   onLogout,
   onSignUp,
 }) => {
-  const renderNavItem = (item: NavItem, mobile: boolean = false) => {
+  const renderNavItem = (item: NavItem, mobile = false) => {
     return (
       <NavigationMenuItem key={item.label} className={mobile ? 'w-full' : ''}>
         <NavigationMenuLink asChild>
@@ -58,7 +58,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
     )
   }
 
-  const renderAuthButtons = (mobile: boolean = false) => {
+  const renderAuthButtons = (mobile = false) => {
     const buttonClass = mobile
       ? 'w-full justify-start font-urbanist font-bold text-black bg-transparent hover:bg-transparent'
       : 'rounded-full font-urbanist font-bold text-white bg-transparent hover:bg-white/20'
