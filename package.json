@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "biome:check": "biome check ./src",
+    "biome:lint": "biome lint ./src",
+    "biome:format": "biome format ./src",
+    "biome:ci": "biome ci ./src",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -31,6 +34,9 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@types/node": "^22.7.5",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
