@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import StarRating from './StarRating'
 import { CardContent } from './ui/card'
 
 interface DestinationContent {
@@ -6,13 +6,13 @@ interface DestinationContent {
   location: string
   title: string
   description: string
-  linkContent: string
-  linkTarget: string
+  ratingValue: number | null
+  onClick: () => void
 }
 
 const CardPlaceContent = ({ ...props }: DestinationContent) => {
   return (
-    <CardContent className="flex flex-row flex-wrap justify-between px-12 mb-6 h-1/4">
+    <CardContent className="flex flex-row flex-wrap justify-between px-12 mb-6 h-1/4 font-urbanist">
       <div className="flex-[0.4] min-w-[300px] min-h-[300px]">
         <img
           className="h-full rounded-lg"
@@ -22,20 +22,25 @@ const CardPlaceContent = ({ ...props }: DestinationContent) => {
       </div>
       <div className="flex flex-col flex-[0.55] justify-between min-h-[300px] min-w-[300px]">
         <div className="flex-[0.8]">
-          <p className="text-sm font-serif py-2">{props.location}</p>
-          <h3 className="text-xl font-bold font-serif text-[#397D54]">
-            {props.title}
-          </h3>
-          <p className="text-sm font-serif h-80 overflow-y-auto my-2">
+          <p className="text-sm py-2">{props.location}</p>
+          <h3 className="text-xl font-bold text-[#397D54]">{props.title}</h3>
+          <p className="text-sm h-80 overflow-y-auto my-2 font-urbanist">
             {props.description}
           </p>
         </div>
-        <Link
-          className="flex items-center max-w-max text-base font-semibold font-serif text-[#397D54] flex-[0.2]"
-          to={props.linkTarget}
-        >
-          {props.linkContent}
-        </Link>
+        <div className="flex justify-between flex-[0.2]">
+          {typeof props.ratingValue === 'number' &&
+            !Number.isNaN(props.ratingValue) && (
+              <StarRating readOnly initialRating={props.ratingValue} />
+            )}
+          <button
+            type="button"
+            className="max-w-max text-base font-semibold text-[#397D54]"
+            onClick={() => props.onClick()}
+          >
+            Click to rate
+          </button>
+        </div>
       </div>
     </CardContent>
   )
