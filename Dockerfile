@@ -21,7 +21,7 @@ RUN yarn install --frozen-lockfile --ignore-scripts
 
 # Copy source code
 COPY ./src ./src
-COPY ./public ./public
+# COPY ./public ./public
 
 # Copy configure fie
 COPY index.html ./
