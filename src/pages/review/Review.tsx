@@ -16,13 +16,13 @@ const Review = () => {
   }
 
   return (
-    <div className="font-urbanist my-10">
+    <div className="font-urbanist mt-48 mb-10">
       <PrimaryHeader
         title="Share your Travel Experience in form of a story"
         description={null}
         searchPlaceholder="What would you like to review?"
       />
-      <div className="px-12">
+      <div className="px-24">
         <CardHeader className="flex flex-row justify-between">
           <div className="">
             <h2 className="text-2xl font-bold font-serif text-[#397D54]">

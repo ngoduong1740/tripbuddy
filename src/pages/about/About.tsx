@@ -2,8 +2,8 @@ import React from 'react'
 
 const About: React.FC = () => {
   return (
-    <div className="container mx-auto p-8 mt-10">
-      <section className="text-center mb-12">
+    <div className="container mx-auto px-24 py-8 mt-24">
+      <section className="text-center my-12">
         <h1 className="text-[55px] font-extrabold text-[#397D54] font-urbanist mb-6">
           About Us
         </h1>

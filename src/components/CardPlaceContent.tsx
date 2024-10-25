@@ -12,7 +12,7 @@ interface DestinationContent {
 
 const CardPlaceContent = ({ ...props }: DestinationContent) => {
   return (
-    <CardContent className="flex flex-row flex-wrap justify-between px-12 mb-6 h-1/4 font-urbanist">
+    <CardContent className="flex flex-row flex-wrap justify-between mb-6 h-1/4 font-urbanist">
       <div className="flex-[0.4] min-w-[300px] min-h-[300px]">
         <img
           className="h-full rounded-lg"
