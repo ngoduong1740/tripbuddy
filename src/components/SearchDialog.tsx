@@ -20,38 +20,25 @@ import {
 } from 'lucide-react'
 import React from 'react'
 
-const SearchDialog: React.FC = () => {
+interface SearchDialogProps {
+  color: string
+}
+
+const SearchDialog: React.FC<SearchDialogProps> = ({ color }) => {
   const [open, setOpen] = React.useState(false)
-
-  React.useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || e.key === '/') {
-        if (
-          (e.target instanceof HTMLElement && e.target.isContentEditable) ||
-          e.target instanceof HTMLInputElement ||
-          e.target instanceof HTMLTextAreaElement ||
-          e.target instanceof HTMLSelectElement
-        ) {
-          return
-        }
-
-        e.preventDefault()
-        setOpen((open) => !open)
-      }
-    }
-
-    document.addEventListener('keydown', down)
-    return () => document.removeEventListener('keydown', down)
-  }, [])
+  const searchButtonClass =
+    color === '#FFFFFF'
+      ? 'cursor-pointer rounded-full bg-transparent p-2 transition-colors duration-300 hover:bg-white/20'
+      : `cursor-pointer rounded-full bg-transparent p-2 transition-colors duration-300 hover:bg-[${color}]/20`
 
   return (
     <>
       <Button
         size="icon"
         onClick={() => setOpen(true)}
-        className="cursor-pointer rounded-full bg-transparent p-2 transition-colors duration-300 hover:bg-white/20"
+        className={searchButtonClass}
       >
-        <Search color="white" />
+        <Search color={color} />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
