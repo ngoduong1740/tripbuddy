@@ -52,7 +52,7 @@ const CreateReviewForm = ({ onClick }: CreateReviewProp) => {
   }
 
   return (
-    <div className="flex flex-row justify-between px-12 mb-12">
+    <div className="flex flex-row justify-between mb-12">
       <div className="flex-[0.4] flex flex-col items-center">
         <div className="mt-8 w-full">
           <ImageUploader onChange={handleUploadImage} />
