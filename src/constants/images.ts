@@ -1,6 +1,6 @@
 export const IMAGES = {
   logo_green:
-    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729409663/logo_white_qttvvm.svg',
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729409664/logo_green_vkwfni.svg',
   logo_white:
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729409663/logo_white_qttvvm.svg',
   fptu: 'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729409663/fptu_kr6p5y.svg',
