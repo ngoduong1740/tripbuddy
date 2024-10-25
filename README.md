@@ -31,7 +31,7 @@
 
 ## 👥 Đội ngũ phát triển
 
-| [![](https://github.com/pnquyen24.png)](https://github.com/pnquyen24) | [![](https://github.com/ngoduong0710.png)](https://github.com/ngoduong0710) | [![](https://github.com/username1.png)](https://github.com/2bngbtran04) | [![](https://github.com/Dungnguyengl.png)](https://github.com/Dungnguyengl) | [![](https://github.com/CanhTruongKool.png)](https://github.com/CanhTruongKool) |
+| [![](https://github.com/pnquyen24.png)](https://github.com/pnquyen24) | [![](https://github.com/ngoduong0710.png)](https://github.com/ngoduong0710) | [![](https://github.com/bnbtran.png)](https://github.com/bnbtran) | [![](https://github.com/Dungnguyengl.png)](https://github.com/Dungnguyengl) | [![](https://github.com/CanhTruongKool.png)](https://github.com/CanhTruongKool) |
 |:---:|:---:|:---:|:---:|:---:|
 | **Phạm Ngọc Quyền**<br>Team Lead | **Ngô Dương**<br>Full-stack Developer | **Bùi Ngọc Bảo Trân**<br>Frontend Developer | **Nguyễn Trung Dũng**<br>Backend Developer | **Trương Thế Cảnh**<br>Backend Developer |
 
