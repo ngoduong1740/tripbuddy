@@ -17,4 +17,12 @@ export const IMAGES = {
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729409662/image_2_ok9qdl.png',
   image_3:
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729409663/image_3_ylljte.png',
+  DES_01:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729833231/DES_01_qwvmoy.png',
+  DES_02:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729833232/DES_02_ywp9dj.png',
+  DES_03:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729833232/DES_03_ubemlr.png',
+  vector_logo:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729838531/Vector_egoa4h.png',
 }

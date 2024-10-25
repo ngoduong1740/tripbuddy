@@ -27,8 +27,8 @@ const Review = () => {
           <div className="">
             <h2 className="text-2xl font-bold font-serif text-[#397D54]">
               {isReview
-                ? 'Top places with reviews'
-                : 'Let us know your adventure'}
+                ? 'Let us know your adventure'
+                : 'Top places with reviews'}
             </h2>
             <p className="text-[#404040]">
               Travelers want to see more reviews of these places.
