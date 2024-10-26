@@ -96,9 +96,9 @@ const CreateReviewForm = ({ onClick }: CreateReviewProp) => {
           </label>
         </div>
         <button
-          type="submit"
+          type="button"
           className="font-urbanist rounded-3xl bg-[#397D54] py-2 px-6 text-[#FFFFFF]"
-          onSubmit={onClick}
+          onClick={onClick}
         >
           Summit Review
         </button>

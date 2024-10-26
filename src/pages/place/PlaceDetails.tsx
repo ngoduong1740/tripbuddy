@@ -53,7 +53,7 @@ const PlaceDetails = () => {
       <div className="px-12">
         <div>
           <CardHeader>
-            <h2 className="text-2xl font-bold font-serif text-[#397D54]">
+            <h2 className="text-2xl font-bold font-urbanist text-[#397D54]">
               Map Views
             </h2>
             <p className="text-[#404040]">
@@ -70,7 +70,7 @@ const PlaceDetails = () => {
         </div>
         <div>
           <CardHeader>
-            <h2 className="text-2xl font-bold font-serif text-[#397D54]">
+            <h2 className="text-2xl font-bold font-urbanist text-[#397D54]">
               About Destination
             </h2>
             <p className="text-[#404040]">
