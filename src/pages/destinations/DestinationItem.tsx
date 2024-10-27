@@ -12,7 +12,7 @@ interface DestinationItemProps {
 
 const DestinationItem: React.FC<DestinationItemProps> = ({ ...props }) => {
   return (
-    <CardContent className="flex-col">
+    <CardContent className="flex-col mb-14">
       <div className="">
         <img className="rounded-3xl" src={props.imageUrl} alt={props.place} />
       </div>

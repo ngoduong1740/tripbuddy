@@ -44,13 +44,13 @@ const PlaceDetails = () => {
   }
 
   return (
-    <div>
+    <div className="mt-48">
       <PrimaryHeader
         title="Place Details"
         description="Places vừa chọn ở trang trước"
         searchPlaceholder={null}
       />
-      <div className="px-12">
+      <div className="px-24">
         <div>
           <CardHeader>
             <h2 className="text-2xl font-bold font-urbanist text-[#397D54]">
