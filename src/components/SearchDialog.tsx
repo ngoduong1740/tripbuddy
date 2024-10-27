@@ -28,8 +28,8 @@ const SearchDialog: React.FC<SearchDialogProps> = ({ color }) => {
   const [open, setOpen] = React.useState(false)
   const searchButtonClass =
     color === '#FFFFFF'
-      ? 'cursor-pointer rounded-full bg-transparent p-2 transition-colors duration-300 hover:bg-white/20'
-      : `cursor-pointer rounded-full bg-transparent p-2 transition-colors duration-300 hover:bg-[${color}]/20`
+      ? 'cursor-pointer rounded-full bg-transparent transition-colors duration-300 hover:bg-white/20'
+      : `cursor-pointer rounded-full bg-transparent transition-colors duration-300 hover:bg-[${color}]/20`
 
   return (
     <>

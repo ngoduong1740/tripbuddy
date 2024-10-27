@@ -64,12 +64,12 @@ const Destinations = () => {
 
   // Technology Partners Section
   return (
-    <div className="my-6">
+    <div className="mb-6">
       <HeroSection sections={heroSections} mainTitle={heroSectionTitle} />
-      <div className="px-12">
-        <CardHeader className="flex flex-row justify-between my-4">
+      <div className="px-24">
+        <CardHeader className="flex flex-row justify-between mt-20 mb-8">
           <div className="">
-            <h2 className="text-2xl font-bold font-urbanist text-[#397D54]">
+            <h2 className="text-3xl font-bold font-urbanist text-[#397D54]">
               Top Destination
             </h2>
             <p className="text-[#404040]">
@@ -84,10 +84,10 @@ const Destinations = () => {
             View All Destinations
           </button>
         </CardHeader>
-        <div className="flex flex-wrap px-10">
+        <div className="flex flex-wrap -mx-4">
           {destinationItems.map((item) => {
             return (
-              <div key={item.id} className="w-1/2 px-2">
+              <div key={item.id} className="w-1/2 px-3">
                 <DestinationItem
                   imageUrl={item.imageUrl}
                   place={item.place}
