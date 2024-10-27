@@ -8,6 +8,7 @@ import EditProfile from './pages/profile/EditProfile'
 import Profile from './pages/profile/Profile'
 import QnA from './pages/qna/QnA'
 import Review from './pages/review/Review'
+import Schedules from './pages/schedules/Schedules'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/edit" element={<EditProfile />} />
           <Route path="/qna" element={<QnA />} />
+          <Route path="/schedules" element={<Schedules />} />
         </Routes>
       </Layout>
     </Router>
