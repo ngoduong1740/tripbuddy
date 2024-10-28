@@ -6,7 +6,8 @@ interface DestinationContent {
   location: string
   title: string
   description: string
-  ratingValue: number | null
+  ratingValue?: number | null
+  buttonLabel: string
   onClick: () => void
 }
 
@@ -15,7 +16,7 @@ const CardPlaceContent = ({ ...props }: DestinationContent) => {
     <CardContent className="flex flex-row flex-wrap justify-between mb-6 h-1/4 font-urbanist">
       <div className="flex-[0.4] min-w-[300px] min-h-[300px]">
         <img
-          className="h-full rounded-lg"
+          className="h-full rounded-3xl"
           src={props.imageUrl}
           alt={props.location}
         />
@@ -38,7 +39,7 @@ const CardPlaceContent = ({ ...props }: DestinationContent) => {
             className="max-w-max text-base font-semibold text-[#397D54]"
             onClick={() => props.onClick()}
           >
-            Click to rate
+            {props.buttonLabel}
           </button>
         </div>
       </div>

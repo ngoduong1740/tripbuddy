@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import About from './pages/about/About'
 import Destinations from './pages/destinations/Destinations'
 import Home from './pages/home/Home'
+import Notification from './pages/notification/Notification'
 import PlaceDetails from './pages/place/PlaceDetails'
 import EditProfile from './pages/profile/EditProfile'
 import Profile from './pages/profile/Profile'
@@ -29,6 +30,7 @@ function App() {
             path="/reccomend-attraction"
             element={<ReccomendAttractionList />}
           />
+          <Route path="/notification" element={<Notification />} />
         </Routes>
       </Layout>
     </Router>

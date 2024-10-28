@@ -86,6 +86,7 @@ const PlaceDetails = () => {
                 title={content.title}
                 description={content.description}
                 ratingValue={null}
+                buttonLabel={'Click to rate'}
                 onClick={handleNavigate}
               />
             )
