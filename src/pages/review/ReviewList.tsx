@@ -49,6 +49,7 @@ const ReviewList = ({ onClick }: ReviewListProp) => {
             title={content.title}
             description={content.description}
             ratingValue={content.ratingValue}
+            buttonLabel={'Click to rate'}
             onClick={onClick}
           />
         )
