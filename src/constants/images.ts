@@ -25,4 +25,6 @@ export const IMAGES = {
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729833232/DES_03_ubemlr.png',
   vector_logo:
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729838531/Vector_egoa4h.png',
+  REC_01:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730031663/REC_01_g4yeum.png',
 }

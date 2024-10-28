@@ -7,6 +7,7 @@ import PlaceDetails from './pages/place/PlaceDetails'
 import EditProfile from './pages/profile/EditProfile'
 import Profile from './pages/profile/Profile'
 import QnA from './pages/qna/QnA'
+import ReccomendAttractionList from './pages/reccomend-attraction/ReccomendAttractionList'
 import Review from './pages/review/Review'
 import Schedules from './pages/schedules/Schedules'
 
@@ -24,6 +25,10 @@ function App() {
           <Route path="/profile/edit" element={<EditProfile />} />
           <Route path="/qna" element={<QnA />} />
           <Route path="/schedules" element={<Schedules />} />
+          <Route
+            path="/reccomend-attraction"
+            element={<ReccomendAttractionList />}
+          />
         </Routes>
       </Layout>
     </Router>
