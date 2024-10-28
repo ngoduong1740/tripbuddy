@@ -8,7 +8,7 @@
 
 ### 🔗 Live Demo
 
-[![Deployed on Azure](https://img.shields.io/badge/deployed_on-azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://ashy-desert-0db2c0f00.5.azurestaticapps.net)
+[![Deployed on Azure](https://img.shields.io/badge/deployed_on-azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://tripbuddy.site)
 
 ### 📊 Project Stats
 
