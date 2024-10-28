@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import About from './pages/about/About'
 import Destinations from './pages/destinations/Destinations'
+import TravelHistory from './pages/history/TravelHistory'
 import Home from './pages/home/Home'
 import Notification from './pages/notification/Notification'
 import PlaceDetails from './pages/place/PlaceDetails'
@@ -31,6 +32,7 @@ function App() {
             element={<ReccomendAttractionList />}
           />
           <Route path="/notification" element={<Notification />} />
+          <Route path="/travel-history" element={<TravelHistory />} />
         </Routes>
       </Layout>
     </Router>
