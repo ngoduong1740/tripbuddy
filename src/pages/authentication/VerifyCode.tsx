@@ -1,5 +1,5 @@
+import { generateId } from '@/utils/id'
 import React from 'react'
-import { v4 as uuidv4 } from 'uuid'
 
 const VerifyCode = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -10,7 +10,7 @@ const VerifyCode = () => {
   }
 
   const inputs = Array.from({ length: 4 }).map(() => ({
-    id: uuidv4(),
+    id: generateId(),
   }))
 
   return (

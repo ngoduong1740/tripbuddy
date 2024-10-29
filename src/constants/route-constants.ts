@@ -4,6 +4,7 @@ export const ROUTES_OF_WHITE_BACKGROUND_PAGE = [
   '/reviews',
   '/notification',
   '/schedules',
+  '/schedules/detail',
   '/qna',
   '/profile',
   '/profile/edit',
