@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const SignUp = () => {
   return (
     <div className="flex h-screen">
@@ -103,12 +105,12 @@ const SignUp = () => {
 
         <p className="mt-6 text-[#5B5B5B] font-urbanist">
           Already have an account yet ?{' '}
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="text-[#397D54] font-semibold underline font-urbanist"
           >
             Sign in to account
-          </a>
+          </Link>
         </p>
       </div>
     </div>
