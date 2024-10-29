@@ -1,13 +1,15 @@
 import React from 'react'
 
+import { Outlet, useNavigate } from 'react-router-dom'
 import Footer from './Footer'
 import NavigationBar from './NavigationBar'
 
 interface LayoutProps {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const navigate = useNavigate()
   const navItems = [
     { label: 'Destinations', path: '/destinations' },
     { label: 'Schedules', path: '/schedules' },
@@ -20,11 +22,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <NavigationBar
         navItems={navItems}
         isLoggedIn={false}
-        onLogin={() => console.log('Login clicked')}
-        onLogout={() => console.log('Logout clicked')}
-        onSignUp={() => console.log('Sign up clicked')}
+        onLogin={() => navigate('/login')}
+        onLogout={() => navigate('/')}
+        onSignUp={() => navigate('/signup')}
       />
-      <main className="mx-auto w-full flex-grow">{children}</main>
+      <main className="mx-auto w-full flex-grow">{children || <Outlet />}</main>
       <Footer />
     </div>
   )
