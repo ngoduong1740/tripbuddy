@@ -33,6 +33,7 @@
     "react-router-dom": "^6.26.2",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
+    "uuid": "^11.0.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {

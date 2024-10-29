@@ -1,6 +1,11 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import About from './pages/about/About'
+import ForgotPassword from './pages/authentication/ForgotPassword'
+import Login from './pages/authentication/Login'
+import ResetPassword from './pages/authentication/ResetPassword'
+import SignUp from './pages/authentication/SignUp'
+import VerifyCode from './pages/authentication/VerifyCode'
 import Destinations from './pages/destinations/Destinations'
 import TravelHistory from './pages/history/TravelHistory'
 import Home from './pages/home/Home'
@@ -33,6 +38,11 @@ function App() {
           />
           <Route path="/notification" element={<Notification />} />
           <Route path="/travel-history" element={<TravelHistory />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/forget-password" element={<ForgotPassword />} />
+          <Route path="/verify-code" element={<VerifyCode />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
       </Layout>
     </Router>
