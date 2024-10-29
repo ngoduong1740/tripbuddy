@@ -22,6 +22,7 @@ import QnA from './pages/qna/QnA'
 import ReccomendAttractionList from './pages/reccomend-attraction/ReccomendAttractionList'
 import Review from './pages/review/Review'
 import Schedules from './pages/schedules/Schedules'
+import SchedulesDetail from './pages/schedules/SchedulesDetail'
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/profile/edit" element={<EditProfile />} />
           <Route path="/qna" element={<QnA />} />
           <Route path="/schedules" element={<Schedules />} />
+          <Route path="/schedules/detail" element={<SchedulesDetail />} />
           <Route
             path="/reccomend-attraction"
             element={<ReccomendAttractionList />}

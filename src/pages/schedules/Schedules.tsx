@@ -3,11 +3,15 @@ import { Calendar } from '@/components/ui/calendar'
 import { cn } from '@/lib/utils'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Schedules: React.FC = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
+  const navigate = useNavigate()
 
-  const handleCreatePlan = () => {}
+  const handleCreatePlan = () => {
+    navigate('/schedules/detail')
+  }
 
   return (
     <div className="my-48 px-24">
