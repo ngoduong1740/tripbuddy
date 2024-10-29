@@ -42,7 +42,7 @@ const VerifyCode = () => {
                 type="text"
                 maxLength={1}
                 inputMode="numeric"
-                className="w-16 h-16 border-2 border-gray-300 rounded focus:outline-none focus:border-[#397D54] text-center text-[30px] font-bold font-urbanist text-[#397D54]" // Chỉnh kích thước chữ tại đây
+                className="w-16 h-16 border-2 border-gray-300 rounded focus:outline-none focus:border-[#397D54] text-center text-[30px] font-bold font-urbanist text-[#397D54]"
                 onChange={handleInputChange}
                 placeholder=""
               />

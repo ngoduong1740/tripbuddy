@@ -42,7 +42,7 @@ const Login = () => {
             <input
               type="email"
               id="email"
-              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-b-green-500 focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
+              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
               placeholder="Email Address"
             />
           </div>
@@ -51,7 +51,7 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-b-green-500 focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
+              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
               placeholder="Password"
             />
 
@@ -71,7 +71,7 @@ const Login = () => {
               <input
                 type="checkbox"
                 id="remember"
-                className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                className="h-4 w-4 text-[#397D54] focus:ring-[#397D54] border-gray-300 rounded"
               />
               <label
                 htmlFor="remember"
