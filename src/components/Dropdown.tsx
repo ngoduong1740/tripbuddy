@@ -23,8 +23,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div className="relative">
-      <div
-        className="relative"
+      <button
+        type="button"
+        className="relative w-full"
         onBlur={() => setTimeout(() => setIsOpen(false), 100)}
       >
         <input
@@ -56,7 +57,7 @@ const Dropdown: React.FC<DropdownProps> = ({
             />
           </svg>
         </button>
-      </div>
+      </button>
 
       {isOpen && options.length > 0 && (
         <ul className="absolute z-10 mt-1 border border-gray-300 bg-white rounded-md w-full shadow-lg max-h-48 overflow-auto">
