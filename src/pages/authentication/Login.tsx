@@ -28,7 +28,7 @@ const Login = () => {
             alt="Google"
             className="w-5 h-5 mr-3"
           />
-          Continue with Google
+          <span>Continue with Google</span>
         </button>
 
         <div className="flex items-center text-gray-400 my-4 w-4/5">
