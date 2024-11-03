@@ -14,6 +14,12 @@ import VerifyCode from './pages/authentication/VerifyCode'
 import Destinations from './pages/destinations/Destinations'
 import TravelHistory from './pages/history/TravelHistory'
 import Home from './pages/home/Home'
+import CreateDestination from './pages/management/destination/destination-create'
+import ListDestination from './pages/management/destination/destination-list'
+import UpdateDestination from './pages/management/destination/destination-update'
+import CreateMember from './pages/management/member/member-create'
+import ListMember from './pages/management/member/member-list'
+import UpdateMember from './pages/management/member/member-update'
 import Notification from './pages/notification/Notification'
 import PlaceDetails from './pages/place/PlaceDetails'
 import EditProfile from './pages/profile/EditProfile'
@@ -51,6 +57,12 @@ function App() {
           />
           <Route path="/notification" element={<Notification />} />
           <Route path="/travel-history" element={<TravelHistory />} />
+          <Route path="/destinations/create" element={<CreateDestination />} />
+          <Route path="/destinations/update" element={<UpdateDestination />} />
+          <Route path="/destinations/list" element={<ListDestination />} />
+          <Route path="/members/create" element={<CreateMember />} />
+          <Route path="/members/update" element={<UpdateMember />} />
+          <Route path="/members/list" element={<ListMember />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
