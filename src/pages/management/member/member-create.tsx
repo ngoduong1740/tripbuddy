@@ -1,11 +1,7 @@
-import MemberForm from '@/components/MemberForm'
-import ProfileImageUploader from '@/components/ProfileImageUploader'
-import { Button } from '@/components/ui/button'
-import React, { useRef, useState } from 'react'
+import MemberFormContainer from '@/components/MemberFormContainer'
+import React, { useState } from 'react'
 
 const CreateMember: React.FC = () => {
-  const fileInputRef = useRef<HTMLInputElement | null>(null)
-
   const [formData, setFormData] = useState({
     firstName: 'Alexa',
     lastName: 'Rawles',
@@ -16,26 +12,6 @@ const CreateMember: React.FC = () => {
     status: true,
   })
 
-  const handleClick = () => {
-    fileInputRef.current?.click()
-  }
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files
-    if (files && files.length > 0) {
-      const reader = new FileReader()
-      reader.onload = (e) => {
-        const imgElement = document.getElementById(
-          'profileImage'
-        ) as HTMLImageElement
-        if (imgElement) {
-          imgElement.src = e.target?.result as string
-        }
-      }
-      reader.readAsDataURL(files[0])
-    }
-  }
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target
     setFormData((prevData) => ({
@@ -45,42 +21,12 @@ const CreateMember: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-6 py-8 mt-16">
-      <h1 className="text-[55px] text-center font-extrabold text-[#397D54] font-urbanist mb-6">
-        Create New Member
-      </h1>
-      <hr className="mb-8 w-[1054px] h-[2px] mx-auto" />
-      <div className="w-[80%] mx-auto p-6 bg-[#FFFFFF] rounded-lg shadow-lg mt-[20px] mb-20 border-[#397D54]">
-        <div className="flex items-center justify-between mb-6 mt-2">
-          <ProfileImageUploader
-            imageSrc="https://via.placeholder.com/150"
-            onButtonClick={handleClick}
-            onFileChange={handleFileChange}
-            fileInputRef={fileInputRef}
-          />
-
-          <Button
-            size="default"
-            className="rounded-[14px] bg-[#397D54] w-32 h-11 hover:bg-[#27633F]"
-          >
-            <div className="font-urbanist text-[#FFFFFF] font-bold text-[16px]">
-              Create
-            </div>
-          </Button>
-        </div>
-
-        <MemberForm
-          firstName={formData.firstName}
-          lastName={formData.lastName}
-          location={formData.location}
-          mobileNumber={formData.mobileNumber}
-          email={formData.email}
-          dateOfBirth={formData.dateOfBirth}
-          profileImage={''}
-          onInputChange={handleInputChange}
-        />
-      </div>
-    </div>
+    <MemberFormContainer
+      title="Create New Member"
+      buttonText="Create"
+      initialData={formData}
+      onInputChange={handleInputChange}
+    />
   )
 }
 
