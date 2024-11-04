@@ -9,4 +9,10 @@ export const ROUTES_OF_WHITE_BACKGROUND_PAGE = [
   '/profile',
   '/profile/edit',
   '/travel-history',
+  '/destinations/list',
+  '/destinations/create',
+  '/destinations/update',
+  '/members/list',
+  '/members/create',
+  '/members/update',
 ]

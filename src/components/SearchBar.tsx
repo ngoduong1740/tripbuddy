@@ -8,7 +8,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ placeholder = '' }) => {
       <input
         type="text"
         placeholder={placeholder}
-        className="border border-[#397D54] w-full placeholder-[#397D54] rounded-3xl py-2 px-4"
+        className="border border-[#397D54] w-full placeholder-[#397D54] rounded-3xl py-2 px-4 focus:ring-[0.5px] focus:ring-[#397D54] focus:border-[#397D54]"
       />
       <svg
         aria-label="searh"

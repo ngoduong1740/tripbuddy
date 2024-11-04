@@ -1,9 +1,19 @@
-import UserStats from '@/components/UserStats'
+import MemberForm from '@/components/MemberForm'
 import { Button } from '@/components/ui/button'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 const CreateMember: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null)
+
+  const [formData, setFormData] = useState({
+    firstName: 'Alexa',
+    lastName: 'Rawles',
+    location: 'Viet Nam',
+    mobileNumber: '0123456789',
+    email: 'Alexa@gmail.com',
+    dateOfBirth: '1111-01-01',
+    status: true,
+  })
 
   const handleClick = () => {
     if (fileInputRef.current) {
@@ -25,6 +35,14 @@ const CreateMember: React.FC = () => {
       }
       reader.readAsDataURL(files[0])
     }
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === 'checkbox' ? checked : value,
+    }))
   }
 
   return (
@@ -75,92 +93,16 @@ const CreateMember: React.FC = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              First Name:
-            </p>
-            <input
-              className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
-              type="text"
-              defaultValue="Alexa"
-            />
-          </div>
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              Last Name:
-            </p>
-            <input
-              className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
-              type="text"
-              defaultValue="Rawles"
-            />
-          </div>
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              Location:
-            </p>
-            <input
-              className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
-              type="text"
-              defaultValue="Viet Nam"
-            />
-          </div>
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              Mobile Number:
-            </p>
-            <input
-              className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
-              type="number"
-              defaultValue="0123456789"
-            />
-          </div>
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              Email:
-            </p>
-            <input
-              className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
-              type="text"
-              defaultValue="Alexa@gmail.com"
-            />
-          </div>
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              Date Of Birth:
-            </p>
-            <input
-              className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
-              type="date"
-              defaultValue="01/01/1111"
-            />
-          </div>
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              Location:
-            </p>
-            <input
-              className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
-              type="text"
-              defaultValue="Quy Nhon"
-            />
-          </div>
-          <div className="space-y-2">
-            <p className="font-urbanist font-medium text-[#000000] text-[16px]">
-              Status:
-            </p>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                className="sr-only"
-                defaultChecked={true}
-              />
-              <div className="w-14 h-8 bg-[#D1D5DB] rounded-full peer peer-focus:ring-0 peer-focus:ring-[#397D54] peer-checked:bg-[#397D54] transition-colors duration-200 ease-in-out mt-2" />{' '}
-              <span className="absolute w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-200 ease-in-out transform peer-checked:translate-x-6 mt-2 ml-1" />
-            </label>
-          </div>
-        </div>
+        <MemberForm
+          firstName={formData.firstName}
+          lastName={formData.lastName}
+          location={formData.location}
+          mobileNumber={formData.mobileNumber}
+          email={formData.email}
+          dateOfBirth={formData.dateOfBirth}
+          profileImage={''}
+          onInputChange={handleInputChange}
+        />
       </div>
     </div>
   )

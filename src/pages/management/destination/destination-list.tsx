@@ -1,51 +1,60 @@
+import ManagementTable from '@/components/ManagementTable'
 import SearchBar from '@/components/SearchBar'
 import TBPagination from '@/components/TBPagination'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const destinations = [
+interface Destination {
+  id: number
+  img: string
+  name: string
+  description: string
+  location: string
+}
+
+const destinations: Destination[] = [
   {
+    id: 1,
     img: 'https://tinyurl.com/mvsye7ff',
     name: 'Bluenose',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
-    status: '+4%',
   },
   {
+    id: 2,
     img: 'https://tinyurl.com/mvsye7ff',
     name: 'Pennywise',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
-    status: '-8%',
   },
   {
+    id: 3,
     img: 'https://tinyurl.com/mvsye7ff',
-    name: 'Flotsam',
+    name: 'Bluenose',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
-    status: '+19%',
   },
   {
+    id: 4,
     img: 'https://tinyurl.com/mvsye7ff',
-    name: 'Gregautsch',
+    name: 'Pennywise',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
-    status: '',
   },
   {
+    id: 5,
     img: 'https://tinyurl.com/mvsye7ff',
-    name: 'ElPistolero',
+    name: 'Bluenose',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
-    status: '-6%',
   },
-  {
-    img: 'https://tinyurl.com/mvsye7ff',
-    name: 'Siuuuuuuu',
-    description: 'OKe, gấc xin đẹp tuỵt vờiii',
-    location: 'Ép Pi Ti',
-    status: '+7%',
-  },
+]
+
+const columns = [
+  { Header: 'Destination', accessor: 'name' },
+  { Header: 'Description', accessor: 'description' },
+  { Header: 'Specific Location', accessor: 'location' },
+  { Header: 'Actions', accessor: 'actions' },
 ]
 
 const ListDestination = () => {
@@ -72,68 +81,7 @@ const ListDestination = () => {
         </button>
       </div>
 
-      <table className="min-w-full bg-white rounded-lg">
-        <thead>
-          <tr>
-            <th className="px-4 py-2 w-1/4 font-semibold text-[#397D54] text-[18px]">
-              Destination
-            </th>
-            <th className="px-4 py-2 w-1/4 font-semibold text-[#397D54] text-[18px]">
-              Description
-            </th>
-            <th className="px-4 py-2 w-1/4 font-semibold text-[#397D54] text-[18px]">
-              Specific Location
-            </th>
-            <th className="px-4 py-2 w-1/4 font-semibold text-[#397D54] text-[18px]">
-              Actions
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {destinations.map((dest) => (
-            <tr key={`${dest.name}-${dest.location}`} className="text-center">
-              <td className="px-4 py-4 border-b flex ml-10 font-urbanist font-bold text-[18px]">
-                {dest.img && (
-                  <img
-                    src={dest.img}
-                    alt={dest.name}
-                    className="w-16 h-16 object-cover rounded-full mr-2"
-                  />
-                )}
-                <span className="mt-6">{dest.name}</span>
-              </td>
-
-              <td className="px-4 py-4 border-b">
-                <span className="px-2 py-1 font-urbanist">
-                  {dest.description}
-                </span>
-              </td>
-
-              <td className="px-4 py-4 border-b">
-                <div className="flex items-center justify-center font-urbanist">
-                  <span>{dest.location}</span>
-                </div>
-              </td>
-
-              <td className="px-4 py-4 border-b">
-                <button
-                  type="button"
-                  onClick={() => navigate('/destinations/update')}
-                  className="bg-[#397D54] text-white px-4 py-1 rounded-full mr-2 font-urbanist font-semibold"
-                >
-                  Edit
-                </button>
-                <button
-                  type="button"
-                  className="bg-[#A65959] text-white px-4 py-1 rounded-full font-urbanist font-semibold"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <ManagementTable columns={columns} items={destinations} />
 
       <div className="mt-10">
         <TBPagination />
