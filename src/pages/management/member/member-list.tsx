@@ -2,7 +2,7 @@ import ManagementTable from '@/components/ManagementTable'
 import SearchBar from '@/components/SearchBar'
 import TBPagination from '@/components/TBPagination'
 import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 interface Member {
   id: string
@@ -38,7 +38,6 @@ const columns = [
 
 const ListMember = () => {
   const navigate = useNavigate()
-  const location = useLocation()
 
   const handleEditClick = (id: string) => {
     navigate('/members/update')
@@ -52,7 +51,7 @@ const ListMember = () => {
       <hr className="mb-8 w-[1054px] h-[2px] mx-auto" />
 
       <div className="flex items-center mb-8 font-urbanist">
-        <div className="w-4/5 mx-auto focus: ring-0 focus:ring-[#397D54]">
+        <div className="w-4/5 mx-auto focus:ring-0 focus:ring-[#397D54]">
           <SearchBar placeholder="Search Member" />
         </div>
 
