@@ -2,7 +2,7 @@ import ManagementTable from '@/components/ManagementTable'
 import SearchBar from '@/components/SearchBar'
 import TBPagination from '@/components/TBPagination'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 interface Member {
   id: string
@@ -38,6 +38,11 @@ const columns = [
 
 const ListMember = () => {
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleEditClick = (id: string) => {
+    navigate('/members/update')
+  }
 
   return (
     <div className="container max-w-7xl mx-auto px-8 py-8 mt-8 text-center font-urbanist">
@@ -60,7 +65,11 @@ const ListMember = () => {
         </button>
       </div>
 
-      <ManagementTable columns={columns} items={members} />
+      <ManagementTable
+        columns={columns}
+        items={members}
+        onEdit={handleEditClick}
+      />
 
       <div className="mt-10">
         <TBPagination />

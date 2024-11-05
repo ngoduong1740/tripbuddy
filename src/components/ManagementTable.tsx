@@ -10,13 +10,15 @@ interface Item {
 }
 
 interface ManagementTableProps {
-  columns: Array<{ Header: string; accessor: keyof Item | string }>
+  columns: Array<{ Header: string; accessor: keyof Item | 'actions' }>
   items: Item[]
+  onEdit: (id: string) => void
 }
 
 const ManagementTable: React.FC<ManagementTableProps> = ({
   columns,
   items,
+  onEdit,
 }) => {
   const navigate = useNavigate()
 
@@ -58,10 +60,10 @@ const ManagementTable: React.FC<ManagementTableProps> = ({
               </div>
             </td>
 
-            <td className="  px-4 py-4">
+            <td className="px-4 py-4">
               <button
                 type="button"
-                onClick={() => navigate('/members/update')}
+                onClick={() => onEdit(item.id as string)}
                 className="bg-[#397D54] text-white px-4 py-1 rounded-full mr-2 font-urbanist font-semibold"
               >
                 Edit

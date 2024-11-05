@@ -5,7 +5,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 interface Destination {
-  id: number
+  id: string
   img: string
   name: string
   description: string
@@ -14,35 +14,35 @@ interface Destination {
 
 const destinations: Destination[] = [
   {
-    id: 1,
+    id: '1',
     img: 'https://tinyurl.com/mvsye7ff',
     name: 'Bluenose',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
   },
   {
-    id: 2,
+    id: '2',
     img: 'https://tinyurl.com/mvsye7ff',
     name: 'Pennywise',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
   },
   {
-    id: 3,
+    id: '3',
     img: 'https://tinyurl.com/mvsye7ff',
     name: 'Bluenose',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
   },
   {
-    id: 4,
+    id: '4',
     img: 'https://tinyurl.com/mvsye7ff',
     name: 'Pennywise',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
     location: 'Ép Pi Ti',
   },
   {
-    id: 5,
+    id: '5',
     img: 'https://tinyurl.com/mvsye7ff',
     name: 'Bluenose',
     description: 'OKe, gấc xin đẹp tuỵt vờiii',
@@ -50,7 +50,10 @@ const destinations: Destination[] = [
   },
 ]
 
-const columns = [
+const columns: Array<{
+  Header: string
+  accessor: keyof Destination | 'actions'
+}> = [
   { Header: 'Destination', accessor: 'name' },
   { Header: 'Description', accessor: 'description' },
   { Header: 'Specific Location', accessor: 'location' },
@@ -59,6 +62,10 @@ const columns = [
 
 const ListDestination = () => {
   const navigate = useNavigate()
+
+  const handleEditClick = (id: string) => {
+    navigate('/destinations/update')
+  }
 
   return (
     <div className="container max-w-7xl mx-auto px-8 py-8 mt-8 text-center font-urbanist">
@@ -81,7 +88,11 @@ const ListDestination = () => {
         </button>
       </div>
 
-      <ManagementTable columns={columns} items={destinations} />
+      <ManagementTable
+        columns={columns}
+        items={destinations}
+        onEdit={handleEditClick}
+      />
 
       <div className="mt-10">
         <TBPagination />
