@@ -20,8 +20,6 @@ const ManagementTable: React.FC<ManagementTableProps> = ({
   items,
   onEdit,
 }) => {
-  const navigate = useNavigate()
-
   return (
     <table className="min-w-full bg-white rounded-lg">
       <thead>
