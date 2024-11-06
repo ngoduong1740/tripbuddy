@@ -72,7 +72,6 @@ const MemberFormContainer: React.FC<MemberFormContainerProps> = ({
           mobileNumber={initialData.mobileNumber}
           email={initialData.email}
           dateOfBirth={initialData.dateOfBirth}
-          profileImage={profileImage || ''}
           onInputChange={onInputChange}
         />
       </div>

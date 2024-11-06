@@ -7,7 +7,6 @@ interface MemberFormProps {
   mobileNumber: string
   email: string
   dateOfBirth: string
-  profileImage: string
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
