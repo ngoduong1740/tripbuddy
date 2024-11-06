@@ -25,7 +25,7 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/ngoduong0710/tripbuddy?style=for-the-badge&logo=github)
 
 <!-- Quality & CI -->
-[![Vercel Deployment Status](https://img.shields.io/github/deployments/ngoduong0710/tripbuddy/Production?logo=vercel&style=for-the-badge&label=vercel&logoColor=white)](https://www.tripbuddy.site/)
+[![Vercel Deployment Status](https://img.shields.io/github/deployments/ngoduong0710/tripbuddy/Production?logo=vercel&style=for-the-badge&label=vercel&logoColor=white)](https://github.com/ngoduong0710/tripbuddy/deployments)
 [![Quality Gate Status](https://img.shields.io/sonar/quality_gate/ngoduong0710_tripbuddy?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/summary/new_code?id=ngoduong0710_tripbuddy)
 [![Dependencies Status](https://img.shields.io/librariesio/github/ngoduong0710/tripbuddy?style=for-the-badge)](https://libraries.io/github/ngoduong0710/tripbuddy)
 
