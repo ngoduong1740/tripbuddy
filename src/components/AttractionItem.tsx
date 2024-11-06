@@ -19,13 +19,15 @@ const AttractionItem: React.FC<AttractionItemProps> = ({ ...props }) => {
         )}
         <div className="flex justify-between items-end">
           <p className="text-[#000000] text-base font-bold">{props.country}</p>
-          <button
-            type="button"
-            className="font-urbanist rounded-3xl bg-[#397D54] py-1 px-3 text-[#FFFFFF]"
-            onClick={props.onClick}
-          >
-            {props.action}
-          </button>
+          {props.action && (
+            <button
+              type="button"
+              className="font-urbanist rounded-3xl bg-[#397D54] py-1 px-3 text-[#FFFFFF]"
+              onClick={props.onClick}
+            >
+              {props.action}
+            </button>
+          )}
         </div>
       </div>
     </CardContent>
