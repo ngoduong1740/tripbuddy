@@ -1,6 +1,18 @@
+import { useSignUp } from '@/hooks/useSignUp'
 import { Link } from 'react-router-dom'
 
 const SignUp = () => {
+  const {
+    formData,
+    errors,
+    isLoading,
+    showPassword,
+    showConfirmPassword,
+    handleInputChange,
+    handleSubmit,
+    togglePasswordVisibility,
+  } = useSignUp()
+
   return (
     <div className="flex h-screen">
       <div
@@ -38,68 +50,124 @@ const SignUp = () => {
           <hr className="flex-grow border-gray-300" />
         </div>
 
-        <form className="w-4/5">
-          <div className="mb-4">
-            <input
-              type="text"
-              id="fullName"
-              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
-              placeholder="Full Name"
-            />
+        <form className="w-4/5" onSubmit={handleSubmit}>
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <input
+                type="text"
+                id="firstName"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                className={`mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist ${
+                  errors.firstName ? 'border-b-red-500' : ''
+                }`}
+                placeholder="First Name"
+              />
+              {errors.firstName && (
+                <p className="mt-1 text-xs text-red-500">{errors.firstName}</p>
+              )}
+            </div>
+
+            <div>
+              <input
+                type="text"
+                id="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                className={`mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist ${
+                  errors.lastName ? 'border-b-red-500' : ''
+                }`}
+                placeholder="Last Name"
+              />
+              {errors.lastName && (
+                <p className="mt-1 text-xs text-red-500">{errors.lastName}</p>
+              )}
+            </div>
           </div>
 
           <div className="mb-4">
             <input
               type="email"
               id="email"
-              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
+              value={formData.email}
+              onChange={handleInputChange}
+              className={`mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist ${
+                errors.email ? 'border-b-red-500' : ''
+              }`}
               placeholder="Email Address"
             />
+            {errors.email && (
+              <p className="mt-1 text-xs text-red-500">{errors.email}</p>
+            )}
           </div>
 
           <div className="mb-4 relative">
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               id="password"
-              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
+              value={formData.password}
+              onChange={handleInputChange}
+              className={`mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist ${
+                errors.password ? 'border-b-red-500' : ''
+              }`}
               placeholder="Password"
             />
-
             <button
               type="button"
+              tabIndex={-1}
+              onClick={() => togglePasswordVisibility('password')}
               className="absolute right-3 top-3 mt-2 text-gray-400"
             >
               <img
                 src="https://res.cloudinary.com/dsutqg1fy/image/upload/v1730130935/eye_icon_p9oofs.svg"
-                alt=""
+                alt={showPassword ? 'Hide password' : 'Show password'}
               />
             </button>
+            {errors.password && (
+              <p className="mt-1 text-xs text-red-500">{errors.password}</p>
+            )}
           </div>
 
           <div className="mb-10 relative">
             <input
-              type="password"
+              type={showConfirmPassword ? 'text' : 'password'}
               id="confirmPassword"
-              className="mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist"
+              value={formData.confirmPassword}
+              onChange={handleInputChange}
+              className={`mt-1 p-3 w-full border-0 border-b-2 border-b-gray-300 focus:border-[#397D54] focus:ring-0 placeholder-[#5B5B5B] font-urbanist ${
+                errors.confirmPassword ? 'border-b-red-500' : ''
+              }`}
               placeholder="Confirm Password"
             />
-
             <button
               type="button"
+              tabIndex={-1}
+              onClick={() => togglePasswordVisibility('confirmPassword')}
               className="absolute right-3 top-3 mt-2 text-gray-400"
             >
               <img
                 src="https://res.cloudinary.com/dsutqg1fy/image/upload/v1730130935/eye_icon_p9oofs.svg"
-                alt=""
+                alt={showConfirmPassword ? 'Hide password' : 'Show password'}
               />
             </button>
+            {errors.confirmPassword && (
+              <p className="mt-1 text-xs text-red-500">
+                {errors.confirmPassword}
+              </p>
+            )}
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#397D54] hover:bg-green-800 text-white p-3 rounded-full font-semibold font-urbanist"
+            disabled={isLoading}
+            className={`w-full ${
+              isLoading ? 'bg-gray-400' : 'bg-[#397D54] hover:bg-green-800'
+            } text-white p-3 rounded-full font-semibold font-urbanist flex items-center justify-center`}
           >
-            Sign Up
+            {isLoading ? (
+              <span className="inline-block animate-spin rounded-full h-4 w-4 border-t-2 border-white mr-2" />
+            ) : null}
+            {isLoading ? 'Processing...' : 'Sign Up'}
           </button>
         </form>
 
