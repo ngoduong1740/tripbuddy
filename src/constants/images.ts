@@ -27,6 +27,8 @@ export const IMAGES = {
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729838531/Vector_egoa4h.png',
   REC_01:
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730031663/REC_01_g4yeum.png',
+  RECD_01:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730391083/RECD_01_cgqmhw.png',
   croatia:
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730390222/croatia_e9ir2v.png',
   morocco:

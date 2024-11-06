@@ -3,7 +3,7 @@ import SearchBar from '@/components/SearchBar'
 import TBPagination from '@/components/TBPagination'
 import { DropdownValue } from '@/components/type/types-common'
 import { IMAGES } from '@/constants/images'
-import ReccomendAttractionItem from './ReccomendAttractionItem'
+import AttractionItem from '../../components/AttractionItem'
 
 const ReccomendAttractionList = () => {
   const listRecomendItem = {
@@ -89,7 +89,7 @@ const ReccomendAttractionList = () => {
         {[...Array(12)].map((_) => {
           return (
             <div key={_} className="w-1/3 px-4 pt-8">
-              <ReccomendAttractionItem
+              <AttractionItem
                 imageUrl={listRecomendItem.imageUrl}
                 continent={listRecomendItem.continent}
                 country={listRecomendItem.country}

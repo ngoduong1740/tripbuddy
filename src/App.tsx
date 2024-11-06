@@ -25,6 +25,7 @@ import PlaceDetails from './pages/place/PlaceDetails'
 import EditProfile from './pages/profile/EditProfile'
 import Profile from './pages/profile/Profile'
 import QnA from './pages/qna/QnA'
+import ReccomendAttractionDetails from './pages/reccomend-attraction/ReccomendAttractionDetails'
 import ReccomendAttractionList from './pages/reccomend-attraction/ReccomendAttractionList'
 import Review from './pages/review/Review'
 import Schedules from './pages/schedules/Schedules'
@@ -63,6 +64,10 @@ function App() {
           <Route path="/members/create" element={<CreateMember />} />
           <Route path="/members/update" element={<UpdateMember />} />
           <Route path="/members/list" element={<ListMember />} />
+          <Route
+            path="/reccomend-attraction-details"
+            element={<ReccomendAttractionDetails />}
+          />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
