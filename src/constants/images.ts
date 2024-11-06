@@ -27,4 +27,22 @@ export const IMAGES = {
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1729838531/Vector_egoa4h.png',
   REC_01:
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730031663/REC_01_g4yeum.png',
+  croatia:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730390222/croatia_e9ir2v.png',
+  morocco:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730390221/morocco_ov6xab.png',
+  mexico:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730390222/mexico_j6mdzo.png',
+  shibuya:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730391819/shibuya_aesrcv.png',
+  colosseum:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730391819/colosseum_m4vbin.png',
+  blyde_river_canyon:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730391819/blyde_river_canyon_aeikr1.png',
+  burj_khalifa:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730806985/burj_khalifa_osewd4.png',
+  published_on_main:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730806985/published_on_main_i4tzi9.png',
+  the_hot_springs_of_banos:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730806986/the_hot_springs_of_banos_cpq8cs.png',
 }
