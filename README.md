@@ -8,7 +8,7 @@
 
 ### 🔗 Live Demo
 
-[![Deployed on Azure](https://img.shields.io/badge/deployed_on-azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://tripbuddy.site)
+[![Deployed on Vercel](https://img.shields.io/badge/deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.tripbuddy.site/)
 
 ### 📊 Project Stats
 
@@ -25,7 +25,7 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/ngoduong0710/tripbuddy?style=for-the-badge&logo=github)
 
 <!-- Quality & CI -->
-[![Build Status](https://img.shields.io/github/actions/workflow/status/ngoduong0710/tripbuddy/azure-static-web-apps-ashy-desert-0db2c0f00.yml?style=for-the-badge&logo=github-actions)](https://github.com/ngoduong0710/tripbuddy/actions)
+[![Vercel Deployment Status](https://img.shields.io/github/deployments/ngoduong0710/tripbuddy/Production?logo=vercel&style=for-the-badge&label=vercel&logoColor=white)](https://www.tripbuddy.site/)
 [![Quality Gate Status](https://img.shields.io/sonar/quality_gate/ngoduong0710_tripbuddy?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/summary/new_code?id=ngoduong0710_tripbuddy)
 [![Dependencies Status](https://img.shields.io/librariesio/github/ngoduong0710/tripbuddy?style=for-the-badge)](https://libraries.io/github/ngoduong0710/tripbuddy)
 
@@ -52,18 +52,14 @@
   - <img src="https://cdn.simpleicons.org/commitlint" width="16" height="16" /> CommitLint (Kiểm tra commit messages)
   - <img src="https://cdn.simpleicons.org/lefthook" width="16" height="16" /> Lefthook (Git hooks management)
 
-### ⚡ DevOps
-- <img src="https://cdn.simpleicons.org/docker" width="16" height="16" /> Docker
-- Azure (Deployment)
+### 📦 Deployment
+- <img src="https://cdn.simpleicons.org/vercel/000000" width="16" height="16" /> Vercel (Hosting & Deployment)
 
 ## 💻 Yêu cầu hệ thống
 - <img src="https://cdn.simpleicons.org/nodedotjs" width="16" height="16" /> Node.js (phiên bản 20.x trở lên)
 - <img src="https://cdn.simpleicons.org/yarn" width="16" height="16" /> Yarn package manager
-- <img src="https://cdn.simpleicons.org/docker" width="16" height="16" /> Docker (tùy chọn)
 
 ## 📥 Hướng dẫn cài đặt
-
-### ⚡ Cài đặt thông thường
 
 1. Clone repository
 ```bash
@@ -79,20 +75,6 @@ yarn install
 3. Chạy ứng dụng ở môi trường development
 ```bash
 yarn dev
-```
-
-Ứng dụng sẽ chạy tại `http://localhost:3000`
-
-### 🐳 Sử dụng Docker
-
-1. Build Docker image
-```bash
-docker build -t tripbuddy .
-```
-
-2. Chạy container
-```bash
-docker run -p 3000:80 tripbuddy
 ```
 
 Ứng dụng sẽ chạy tại `http://localhost:3000`
