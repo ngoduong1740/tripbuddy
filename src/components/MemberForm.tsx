@@ -18,7 +18,6 @@ const MemberForm: React.FC<MemberFormProps> = ({
   mobileNumber,
   email,
   dateOfBirth,
-  profileImage,
   onInputChange,
 }) => {
   // Adding unique IDs for each field

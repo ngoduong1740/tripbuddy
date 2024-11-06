@@ -1,7 +1,6 @@
 import ManagementTable from '@/components/ManagementTable'
 import SearchBar from '@/components/SearchBar'
 import TBPagination from '@/components/TBPagination'
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 interface Member {
@@ -39,7 +38,7 @@ const columns = [
 const ListMember = () => {
   const navigate = useNavigate()
 
-  const handleEditClick = (id: string) => {
+  const handleEditClick = () => {
     navigate('/members/update')
   }
 
