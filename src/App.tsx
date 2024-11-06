@@ -21,6 +21,7 @@ import CreateMember from './pages/management/member/member-create'
 import ListMember from './pages/management/member/member-list'
 import UpdateMember from './pages/management/member/member-update'
 import Notification from './pages/notification/Notification'
+import AddPlaceToSchedule from './pages/place/AddPlaceToSchedule'
 import PlaceDetails from './pages/place/PlaceDetails'
 import EditProfile from './pages/profile/EditProfile'
 import Profile from './pages/profile/Profile'
@@ -68,6 +69,7 @@ function App() {
             path="/reccomend-attraction-details"
             element={<ReccomendAttractionDetails />}
           />
+          <Route path="/schedules/add-place" element={<AddPlaceToSchedule />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
