@@ -5,6 +5,8 @@ interface AttractionItemProps {
   imageUrl: string
   continent: string | null
   country: string
+  action?: string
+  onClick?: () => void
 }
 
 const AttractionItem: React.FC<AttractionItemProps> = ({ ...props }) => {
@@ -15,7 +17,16 @@ const AttractionItem: React.FC<AttractionItemProps> = ({ ...props }) => {
         {props.continent && (
           <p className="text-[#5B5B5B] text-sm">{props.continent}</p>
         )}
-        <p className="text-[#000000] text-base font-bold">{props.country}</p>
+        <div className="flex justify-between items-end">
+          <p className="text-[#000000] text-base font-bold">{props.country}</p>
+          <button
+            type="button"
+            className="font-urbanist rounded-3xl bg-[#397D54] py-1 px-3 text-[#FFFFFF]"
+            onClick={props.onClick}
+          >
+            {props.action}
+          </button>
+        </div>
       </div>
     </CardContent>
   )
