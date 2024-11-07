@@ -1,5 +1,6 @@
 import UserStats from '@/components/UserStats'
 import { Button } from '@/components/ui/button'
+import { IMAGES } from '@/constants/images'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -16,15 +17,13 @@ const Profile: React.FC = () => {
         <div className="flex items-center space-x-6">
           <img
             className="w-56 h-56 rounded-full border-4 border-[#397D54] object-cover mb-4"
-            src="https://via.placeholder.com/150"
+            src={IMAGES.avatar_default}
             alt="Profile"
           />
           <div>
-            <h2 className="text-[30px] font-bold font-urbanist">
-              Alexa Rawles
-            </h2>
+            <h2 className="text-[30px] font-bold font-urbanist">Ngô Dương</h2>
             <p className="text-[#000000] opacity-50 text-[20px] font-urbanist">
-              alexarawles@gmail.com
+              ngoduong6@gmail.com
             </p>
           </div>
         </div>
@@ -48,7 +47,7 @@ const Profile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="text"
-            value="Alexa"
+            value="Dương"
             disabled
           />
         </div>
@@ -59,7 +58,7 @@ const Profile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="text"
-            value="Rawles"
+            value="Ngô"
             disabled
           />
         </div>
@@ -70,7 +69,7 @@ const Profile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="text"
-            value="Viet Nam"
+            value=""
             disabled
           />
         </div>
@@ -81,7 +80,7 @@ const Profile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="number"
-            value="0123456789"
+            value=""
             disabled
           />
         </div>

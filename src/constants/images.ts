@@ -47,4 +47,8 @@ export const IMAGES = {
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730806985/published_on_main_i4tzi9.png',
   the_hot_springs_of_banos:
     'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730806986/the_hot_springs_of_banos_cpq8cs.png',
+  avatar_default:
+    'https://w7.pngwing.com/pngs/701/400/png-transparent-minions-illustration-bob-the-minion-minions-stuart-the-minion-minions-heroes-desktop-wallpaper-despicable-me-thumbnail.png',
+  noti_icon:
+    'https://res.cloudinary.com/dsutqg1fy/image/upload/v1730943356/noti_icon_nh1t2s.svg',
 }
