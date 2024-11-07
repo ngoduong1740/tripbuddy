@@ -2,7 +2,7 @@
 
 ## 📝 Giới thiệu
 
-> 🚧 *Đang cập nhật...*
+TripBuddy is a application designed to connect travelers with local residents to discover hidden and lesser - known tourist spots. The platform addresses the growing demand for unique and affordable travel experiences that mainstream apps often overlook. While most travel platforms suggest popular tourist destinations, TripBuddy allows local people to share affordable, lesser - known places that only they are familiar with. Travelers can search for recommended spots, read reviews, plan their itineraries, and get personalized suggestions based on their location. Locals can contribute by sharing their favorite spots, and users can review and rate locations, helping others discover the best places to visit.
 
 ## 🌟 Demo
 
