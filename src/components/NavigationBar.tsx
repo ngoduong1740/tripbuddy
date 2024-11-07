@@ -1,5 +1,3 @@
-import SearchDialog from '@/components/SearchDialog'
-import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -8,33 +6,55 @@ import {
 } from '@/components/ui/navigation-menu'
 import { IMAGES } from '@/constants/images'
 import { ROUTES_OF_WHITE_BACKGROUND_PAGE } from '@/constants/route-constants'
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { authService } from '@/services/api'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import UserHeader from './UserHeader'
 
 interface NavItem {
   label: string
   path: string
 }
 
-interface NavigationBarProps {
-  navItems: NavItem[]
-  isLoggedIn: boolean
-  onLogin: () => void
-  onLogout: () => void
-  onSignUp: () => void
-}
-
-const NavigationBar: React.FC<NavigationBarProps> = ({
-  navItems,
-  isLoggedIn,
-  onLogin,
-  onLogout,
-  onSignUp,
-}) => {
+const NavigationBar = () => {
   const location = useLocation()
+  const navigate = useNavigate()
+  const isLoggedIn = authService.isAuthenticated()
+
+  const navItems = [
+    { label: 'Destinations', path: '/destinations' },
+    { label: 'Schedules', path: '/schedules' },
+    { label: 'Reviews', path: '/reviews' },
+    { label: 'About Us', path: '/about' },
+  ]
   const isOnWhiteBackground = ROUTES_OF_WHITE_BACKGROUND_PAGE.includes(
     location.pathname
   )
+  const adaptiveColor = isOnWhiteBackground ? '#397D54' : '#FFFFFF'
+
+  const handleClickLogin = () => {
+    navigate('/login')
+  }
+
+  const handleClickLogOut = () => {
+    authService.logout()
+    navigate('/')
+  }
+
+  const handleClickSignUp = () => {
+    navigate('/signup')
+  }
+
+  const handleClickNotiIcon = () => {
+    navigate('/notification')
+  }
+
+  const handleClickProfile = () => {
+    navigate('/profile')
+  }
+
+  const handleClickQna = () => {
+    navigate('/qna')
+  }
 
   const renderNavItem = (item: NavItem) => {
     const navItemClass = isOnWhiteBackground
@@ -51,34 +71,9 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
     )
   }
 
-  const renderAuthButtons = () => {
-    const buttonClass = isOnWhiteBackground
-      ? 'rounded-full font-urbanist font-bold text-[#397D54] bg-transparent hover:bg-[#397D54]/20'
-      : 'rounded-full font-urbanist font-bold text-white bg-transparent hover:bg-white/20'
-    const loginButtonClass = isOnWhiteBackground
-      ? 'rounded-full bg-[#397D54] px-9 py-2 font-urbanist font-bold text-white hover:bg-green-800'
-      : 'rounded-full bg-white px-9 py-2 font-urbanist font-bold text-black hover:bg-gray-300'
-
-    return isLoggedIn ? (
-      <Button onClick={onLogout} className={buttonClass}>
-        Logout
-      </Button>
-    ) : (
-      <>
-        <Button onClick={onSignUp} className={buttonClass}>
-          Sign Up
-        </Button>
-        <Button onClick={onLogin} className={loginButtonClass}>
-          Login
-        </Button>
-      </>
-    )
-  }
-
   return (
     <header className="absolute left-0 right-0 top-0 z-50">
       <div className="w-full flex items-center justify-between py-4 px-24">
-        {/* Logo Section */}
         <div className="flex w-1/5 justify-start">
           <Link to="/">
             <img
@@ -89,18 +84,23 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
           </Link>
         </div>
 
-        {/* Navigation Section */}
         <NavigationMenu className="w-3/5 block">
           <NavigationMenuList className="space-x-16">
             {navItems.map((item) => renderNavItem(item))}
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Buttons Section */}
-        <div className="w-1/5 items-center flex justify-between">
-          <SearchDialog color={isOnWhiteBackground ? '#397D54' : '#FFFFFF'} />
-          {renderAuthButtons()}
-        </div>
+        <UserHeader
+          isOnWhiteBackground={isOnWhiteBackground}
+          adaptiveColor={adaptiveColor}
+          isLoggedIn={isLoggedIn}
+          onLogin={handleClickLogin}
+          onLogout={handleClickLogOut}
+          onSignUp={handleClickSignUp}
+          onClickProfile={handleClickProfile}
+          onClickQna={handleClickQna}
+          onClickNotiIcon={handleClickNotiIcon}
+        />
       </div>
     </header>
   )

@@ -1,5 +1,6 @@
 import UserStats from '@/components/UserStats'
 import { Button } from '@/components/ui/button'
+import { IMAGES } from '@/constants/images'
 import React from 'react'
 
 const EditProfile: React.FC = () => {
@@ -11,7 +12,7 @@ const EditProfile: React.FC = () => {
             <div className="absolute inset-0 bg-black opacity-50 rounded-full" />
             <img
               className="w-56 h-56 rounded-full border-4 border-[#397D54] object-cover mb-4"
-              src="https://via.placeholder.com/150"
+              src={IMAGES.avatar_default}
               alt="Profile"
             />
             <button
@@ -26,11 +27,9 @@ const EditProfile: React.FC = () => {
             </button>
           </div>
           <div>
-            <h2 className="text-[30px] font-bold font-urbanist">
-              Alexa Rawles
-            </h2>
+            <h2 className="text-[30px] font-bold font-urbanist">Ngô Dương</h2>
             <p className="text-[#000000] opacity-50 text-[20px] font-urbanist">
-              alexarawles@gmail.com
+              ngoduong6@gmail.com
             </p>
           </div>
         </div>
@@ -53,7 +52,7 @@ const EditProfile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="text"
-            defaultValue="Alexa"
+            value="Dương"
           />
         </div>
         <div className="space-y-2">
@@ -63,7 +62,7 @@ const EditProfile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="text"
-            defaultValue="Rawles"
+            value="Ngô"
           />
         </div>
         <div className="space-y-2">
@@ -73,7 +72,7 @@ const EditProfile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="text"
-            defaultValue="Viet Nam"
+            value=""
           />
         </div>
         <div className="space-y-2">
@@ -83,7 +82,7 @@ const EditProfile: React.FC = () => {
           <input
             className="w-full p-3 border-[#F9F9F9] rounded-lg bg-[#F9F9F9] font-urbanist text-[#397D54] font-semibold text-[18px]"
             type="number"
-            defaultValue="0123456789"
+            value=""
           />
         </div>
       </div>

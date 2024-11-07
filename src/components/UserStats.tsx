@@ -6,7 +6,7 @@ const UserStats = () => {
           Reward Points
         </p>
         <span className="font-urbanist text-[#397D54] font-bold text-[22px]">
-          360
+          0
         </span>
       </div>
       <div className="border-l-2 border-[#EAEAEA] h-24 hidden md:block" />
@@ -15,7 +15,7 @@ const UserStats = () => {
           Schedules
         </p>
         <span className="font-urbanist text-[#397D54] font-bold text-[22px]">
-          238
+          0
         </span>
       </div>
       <div className="border-l-2 border-[#EAEAEA] h-24 hidden md:block" />
@@ -24,7 +24,7 @@ const UserStats = () => {
           History
         </p>
         <span className="font-urbanist text-[#397D54] font-bold text-[22px]">
-          473
+          0
         </span>
       </div>
     </div>
